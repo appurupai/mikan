@@ -1,0 +1,42 @@
+/*
+*= require bootstrap.min.css
+*= require_self
+*/
+body {
+
+}
+
+#main-wrapper {
+    width: 450px;
+    margin: auto;
+    text-align: center;
+    margin-top:80px;
+}
+#footer {
+    color:#CCC;
+    position: absolute;
+    left: 0;
+    height: 30px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+/* FLASH */
+#flash-wrapper {
+    position:absolute;
+    top:20px;
+    width: 450px;
+}
+/* Htext */
+.mh2 {
+    color: #000;
+    line-height: 1.5em;
+    margin: 0px 0px 20px;
+    font-weight: normal;
+}
+.hr2 {
+    border-bottom: 1px solid #CCC;
+}
+.form-ecart {
+    margin-bottom: 5px;
+}

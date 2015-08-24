@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Console</title>
+        <%= stylesheet_link_tag    'devise', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= favicon_link_tag "favicon.ico" %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <div id="main-wrapper">
+            <!-- Flash messages -->
+            <div id="flash-wrapper">
+                <% if flash[:alert] %>
+                <div class="alert alert-danger fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <%= flash[:alert].html_safe %>
+                </div>
+                <% end %>
+                <% if flash[:success] %>
+                <div class="alert alert-success fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <%= flash[:success].html_safe %>
+                </div>
+                <% end %>
+                <% if flash[:notice] %>
+                <div class="alert alert-info fade in" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <%= flash[:notice].html_safe %>
+                </div>
+                <% end %>
+            </div>
+            <!-- END Flash messages -->
+            <%= yield %>
+        </div>
+        <div id="footer">
+            Copyright © Mikan 2015 - @moutonnoireu & @fnux_ch
+        </div>
+    </body>
+</html>

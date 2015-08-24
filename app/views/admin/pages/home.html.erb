@@ -1,0 +1,23 @@
+<h1>Manage Home Page <%= link_to "Back &crarr;".html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
+<%= form_for [:admin,@page] do |f| %>
+<div class="row">
+  <div class="col-md-9">
+    <div class="well well-small">
+      <% if @page.alert %>
+      <%= f.select(:alert, [["Alerte Active", 1],["Alerte Desactivé", 0]], {}, class: "form-control form-ecart") %>
+      <% else %>
+      <%= f.select(:alert, [["Alerte Desactivé", 0],["Alerte Active", 1]], {}, class: "form-control form-ecart") %>
+      <% end %>
+      <%= f.text_field :title, class: "form-control form-ecart", placeholder: "Titre du message" %>
+      <%= f.text_area :content, class: "form-control form-ecart", placeholder: "Contenu du message", rows: 5 %>
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="notice notice-info">
+      <p>Veuillez ici sélectionner la saison affichée sur la page d'accueil de Mikan.</p>
+    </div>
+    <%= f.select(:season_id, Season.all.collect {|p| [ p.title, p.id ] }, {include_blank: 'None'}, class: "form-control form-ecart") %>
+    <%= f.submit "Save &raquo;".html_safe, class: "btn btn-default btn-block btn-lg" %>
+  </div>
+</div>
+<% end %>

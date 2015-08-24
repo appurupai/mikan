@@ -1,0 +1,13 @@
+<div class="col-md-3 col-sm-6 hero-feature">
+    <div class="thumbnail">
+        <%= image_tag(show.image_url(:list)) %>
+        <div class="caption">
+            <h3><%= show.title %></h3>
+            <p><%= show.description %></p>
+            <p>
+                <%= item_link("Hummingbird", show.hummingbird_url, "btn btn-primary") %>
+                <%= item_link("Site Officiel", show.official_url, "btn btn-default") %>
+            </p>
+        </div>
+    </div>
+</div>

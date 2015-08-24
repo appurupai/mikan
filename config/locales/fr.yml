@@ -1,0 +1,58 @@
+fr:
+  nav:
+    home: "Accueil"
+    old_seasons: "Aciennes Saisons"
+    about: "À Propos"
+    contact: "Contactez-nous"
+  admin_warning:
+    message: "Vous êtes connecté en tant qu'administrateur."
+    admin_link: "Accéder au panel d'administration &raquo;"
+    logout_link: "Déconnexion &crarr;"
+  season:
+    list: "Saison"
+    show_me: "Voir &raquo;"
+    back: "Retour &crarr;"
+    suggest: "Proposer une modification &raquo;"
+    shows: "Animés"
+    specials: "Speciaux / OAV"
+    movies: "Films"
+    hummingbird: "Hummingbird"
+    official_website: "Site Officiel &raquo;"
+    empty: "Il n'y a rien ici :/"
+    order:
+      alphabetical: "Ordre Alphabétique"
+      airing: "Date de diffusion"
+      latest: "Derniers Ajouts"
+  contact:
+    email: "Addresse Email (Obligatoire)"
+    name: "Nom/Pseudo (Obligatoire)"
+    content: "Contenu du message... (Obligatoire)"
+    send: "Envoyer &raquo;"
+  flash:
+    contact_error: "le message n'a pas été envoyé. Veuillez vérifier qu'il n'y ai aucun champ vide. Vous pouvez aussi nous contacter sur Twitter (@moutonnoireu, @fnux_ch)."
+    contact_success: "Message envoyé !"
+  admin:
+    nav:
+      admin: "Admin"
+      seasons: "Saisons"
+      pages: "Pages"
+      contact_form: "Formulaire de contact"
+      back: "Retour à la partie publique &crarr;"
+    dashboard:
+      manage_home: "Gestion de la page d'accueil"
+      last_season: "Mofidier la dernière saison"
+      seasons_list: "Gestion des Saisons"
+      contact_form: "Formulaire de contact"
+      home_page: "Page d'accueil"
+      home_info: "Annonce : %{announcement} // Saison : %{season}"
+      stats: "Statistiques"
+      stats_info: "Il y %{seasons_count} saisons comprenant %{items_count} items. Voir <a href=\"http://piwik.fnux.ch/\">http://piwik.fnux.ch/</a> pour les statistiques de visite."
+      contact_form_info: "Il y a %{messages_count} messages en provenance du formulaire de contact."
+    seasons:
+      title: "Gestion des Saisons"
+      new: "Ajouter une Saison &raquo;"
+      season: "Saison"
+      items: "Items"
+      actions: "Actions"
+      edit: "Éditer &raquo;"
+      delete: "Supprimer &raquo;"

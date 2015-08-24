@@ -1,0 +1,19 @@
+<div class="notice notice-info">
+    <p><%= @page.content.html_safe %></p>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:90%;"><%= t('season.list') %></th>
+            <th style="width:10%;"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @seasons.each do |season| %>
+        <tr>
+            <td><%= season.title %></td>
+            <td><%= link_to t('season.show_me').html_safe, season %></td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'admin' %>
+  <%= favicon_link_tag "favicon.ico" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <%= li_link(t('admin.nav.admin'),admin_dashboard_path).html_safe %>
+          <%= li_controller_link(t('admin.nav.seasons'),admin_seasons_path, "seasons").html_safe %>
+          <li role="presentation" class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+              <%= t('admin.nav.pages') %> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to t('nav.home'), admin_pages_home_path %></li>
+              <li><%= link_to t('nav.old_seasons'), admin_pages_seasons_path %></li>
+              <li><%= link_to t('nav.about'), admin_pages_about_path %></li>
+              <li><%= link_to t('nav.contact'), admin_pages_contact_path %></li>
+            </ul>
+          </li>
+          <%= li_link(t('admin.nav.contact_form'),admin_contacts_path).html_safe %>
+          <%= li_link(t('admin.nav.back').html_safe,root_path).html_safe %>
+        </ul>
+      </nav>
+      <h3 class="text-muted">
+        <%= link_to image_tag("mikan.png", :style => "width:50px;"), admin_dashboard_path %>  Mikan - Admin
+        <span id="language-selector">
+          <% if params[:locale] == "fr" || params[:locale].nil? %>
+          <%= link_to image_tag("france.png", class: "language-flag current-language"), params.merge(:locale => "fr") %>
+          <%= link_to image_tag("uk.png",  class: "language-flag"),  params.merge(:locale => "en") %>
+          <% elsif params[:locale] == "en" %>
+          <%= link_to image_tag("france.png", class: "language-flag"), params.merge(:locale => "fr") %>
+          <%= link_to image_tag("uk.png",  class: "language-flag current-language"),  params.merge(:locale => "en") %>
+          <% end %>
+        </span>
+      </h3>
+    </div>
+    <!-- Page Content -->
+    <div class="content">
+      <div id="flash-wrapper">
+        <% if flash[:error] %>
+        <div class="notice notice-alert">
+          <%= flash[:error].html_safe %>
+        </div>
+        <% end %>
+        <% if flash[:success] %>
+        <div class="notice success">
+          <%= flash[:success].html_safe %>
+        </div>
+        <% end %>
+        <% if flash[:info] %>
+        <div class="notice notice-info">
+          <%= flash[:info].html_safe %>
+        </div>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright &copy; Mikan 2015 - @moutonnoireu & @fnux_ch</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- /.container -->
+</body>
+</html>

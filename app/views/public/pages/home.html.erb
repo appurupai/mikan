@@ -1,0 +1,60 @@
+<% if @page.alert %>
+<div class="notice notice-warning">
+  <h1 style="margin:0;"><%= @page.title %></h1>
+  <p><%= @page.content.html_safe %></p>
+</div>
+<% end %>
+
+<% if @view %>
+<header class="notice notice-info">
+  <h1>Mikan : <%= @season.title %></h1>
+  <p><%= @season.notice.html_safe %></p>
+  <p><%= link_to t('season.suggest').html_safe, contact_path, class: "btn btn-primary" %></p>
+</header>
+
+<div class="row">
+  <div class="col-lg-7">
+    <h3><%= t('season.shows') %></h3>
+  </div>
+  <div class="col-lg-5">
+    <div class="btn-group" style="margin-top:15px;">
+      <%= link_to t('season.order.alphabetical'), params.merge(:order => "title"), class: "btn btn-default" %>&nbsp;
+      <%= link_to t('season.order.airing'), params.merge(:order => "airing_from"), class: "btn btn-default" %>&nbsp;
+      <%= link_to t('season.order.latest'), params.merge(:order => "created_at"), class: "btn btn-default" %>&nbsp;
+    </div>
+  </div>
+</div>
+<hr />
+<div class="row text-center">
+  <% @animes.each do |show| %>
+  <%= render "list", :show => show %>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <h3><%= t('season.specials') %></h3>
+  </div>
+</div>
+<hr />
+<div class="row text-center">
+<% @specials.each do |show| %>
+<%= render "list", :show => show %>
+<% end %>
+</div >
+
+<div class="row">
+  <div class="col-lg-12">
+    <h3><%= t('season.movies') %></h3>
+  </div>
+</div>
+<hr />
+
+<div class="row text-center">
+<% @movies.each do |show| %>
+<%= render "list", :show => show %>
+<% end %>
+</div>
+<% else %>
+<p><%= t('season.empty') %></p>
+<% end %>

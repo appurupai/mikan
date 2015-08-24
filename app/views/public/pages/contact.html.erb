@@ -1,0 +1,14 @@
+<h1><%= t('nav.contact') %></h1>
+<p><%= @page.content.html_safe %></p>
+<%= form_for Contact.new do |f| %>
+<div class="row">
+  <div class="col-md-6">
+    <%= f.text_field :name, class: "form-control form-ecart", placeholder:  t('contact.name') %>
+  </div>
+  <div class="col-md-6">
+    <%= f.email_field :mail, class: "form-control form-ecart", placeholder:  t('contact.email') %>
+  </div>
+</div>
+<%= f.text_area :message, class: "form-control form-ecart", rows: 5, placeholder: t('contact.content') %>
+<%= f.submit "Send &raquo;".html_safe, class: "btn btn-default btn-lg btn-block" %>
+<% end %>

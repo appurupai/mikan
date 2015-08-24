@@ -1,0 +1,58 @@
+en:
+  nav:
+    home: "Home"
+    old_seasons: "Old Seasons"
+    about: "About us"
+    contact: "Contact us"
+  admin_warning:
+    message: "You are logged as administrator."
+    admin_link: "Access to the administration panel &raquo;"
+    logout_link: "Logout &crarr;"
+  season:
+    list: "Season"
+    show_me: "Show me &raquo;"
+    back: "Back &crarr;"
+    suggest: "Suggest a change &raquo;"
+    shows: "Shows"
+    specials: "Specials / OVA"
+    movies: "Movies"
+    hummingbird: "Hummingbird &raquo;"
+    official_website: "Website &raquo;"
+    empty: "It's empty :/"
+    order:
+      alphabetical: "Alphabetical Order"
+      airing: "Airing Date"
+      latest: "Latest Items"
+  contact:
+    email: "Your email address (Required)"
+    name: "Your pseudo/name (Required)"
+    content: "Content of the message... (Required)"
+    send: "Send &raquo;"
+  flash:
+    contact_error: "The message was not send. Please check if there is any empty field. You can also contact us on twitter (@fnux_ch, @moutonnoireu)."
+    contact_success: "Message sent !"
+  admin:
+    nav:
+      admin: "Admin"
+      seasons: "Seasons"
+      pages: "Pages"
+      contact_form: "Contact Form"
+      back: "Back to the public area &crarr;"
+    dashboard:
+      manage_home: "Manage Home Page"
+      last_season: "Edit Last Season"
+      seasons_list: "Manage Seasons List"
+      contact_form: "Contact Form"
+      home_page: "Home Page"
+      home_info: "Announcement : %{announcement} // Season : %{season}"
+      stats: "Statistics"
+      stats_info: "There are %{seasons_count} seasons for a totalt of %{items_count} items. See <a href=\"http://piwik.fnux.ch/\">http://piwik.fnux.ch/</a> for stats about visits."
+      contact_form_info: "There are %{messages_count} messages form the contact form."
+    seasons:
+      title: "Seasons Management"
+      new: "Add a new season &raquo;"
+      season: "Season"
+      items: "Items"
+      actions: "Actions"
+      edit: "Edit &raquo;"
+      delete: "Delete &raquo;"

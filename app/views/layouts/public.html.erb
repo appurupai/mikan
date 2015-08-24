@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= favicon_link_tag "favicon.ico" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <div class="header clearfix">
+      <nav>
+        <ul class="nav nav-pills pull-right">
+          <%= li_link(t('nav.home'),root_path).html_safe %>
+          <%= li_controller_link(t('nav.old_seasons'),seasons_list_path, "seasons").html_safe %>
+          <%= li_link(t('nav.about'),about_path).html_safe %>
+          <%= li_link(t('nav.contact'),contact_path).html_safe %>
+        </ul>
+      </nav>
+      <h3 class="text-muted">
+        <%= link_to image_tag("mikan.png", :style => "width:50px;"), root_path %> Mikan
+        <span id="language-selector">
+          <% if params[:locale] == "fr" || params[:locale].nil? %>
+          <%= link_to image_tag("france.png", class: "language-flag current-language"), params.merge(:locale => "fr") %>
+          <%= link_to image_tag("uk.png",  class: "language-flag"),  params.merge(:locale => "en") %>
+          <% elsif params[:locale] == "en" %>
+          <%= link_to image_tag("france.png", class: "language-flag"), params.merge(:locale => "fr") %>
+          <%= link_to image_tag("uk.png",  class: "language-flag current-language"),  params.merge(:locale => "en") %>
+          <% end %>
+        </span>
+      </h3>
+    </div>
+    <% if user_signed_in? %>
+    <div class="notice notice-danger">
+      <p><%= t("admin_warning.message") %></p>
+      <p><%= link_to t("admin_warning.admin_link").html_safe, admin_dashboard_path %> / <%= link_to t("admin_warning.logout_link").html_safe, logout_path %></p>
+    </div>
+    <% end %>
+    <!-- Page Content -->
+    <div class="content">
+      <div id="flash-wrapper">
+        <% if flash[:error] %>
+        <div class="notice notice-danger">
+          <%= flash[:error].html_safe %>
+        </div>
+        <% end %>
+        <% if flash[:success] %>
+        <div class="notice notice-success">
+          <%= flash[:success].html_safe %>
+        </div>
+        <% end %>
+        <% if flash[:info] %>
+        <div class="notice notice-info">
+          <%= flash[:info].html_safe %>
+        </div>
+        <% end %>
+      </div>
+      <%= yield %>
+    </div>
+    <%= render "/layouts/footer" %>
+  </div>
+  <!-- /.container -->
+</body>
+</html>
