@@ -2,7 +2,7 @@
     <div class="col-md-6">
         <%= link_to t('admin.dashboard.manage_home'), admin_pages_home_path, class: "btn btn-default btn-block btn-lg" %>
         <hr />
-        <%= link_to t('admin.dashboard.last_season'), edit_admin_season_path(Season.last), class: "btn btn-default btn-block btn-lg" %>
+        <%= link_to t('admin.dashboard.last_season'), edit_admin_season_path(@last_season), class: "btn btn-default btn-block btn-lg" %>
         <%= link_to t('admin.dashboard.seasons_list'), admin_pages_seasons_path, class: "btn btn-default btn-block btn-lg" %>
         <hr />
         <%= link_to t('admin.dashboard.contact_form'), admin_contacts_path, class: "btn btn-default btn-block btn-lg" %>
@@ -10,15 +10,15 @@
     <div class="col-md-6">
         <div class="notice notice-success">
             <h4 style="margin:0;"><%= t('admin.dashboard.home_page') %></h4>
-            <p><%= t('admin.dashboard.home_info', announcement: @home.alert, season: @home_season) %></p>
+            <p><%= t('admin.dashboard.home_info', announcement: @home_page.alert, season: @home_season) %></p>
         </div>
         <div class="notice notice-info">
           <h4 style="margin:0;"><%= t('admin.dashboard.stats') %></h4>
-            <p><%= t('admin.dashboard.stats_info', seasons_count: @seasons.count, items_count: @items.count).html_safe %></p>
+            <p><%= t('admin.dashboard.stats_info', seasons_count: @seasons, items_count: @items).html_safe %></p>
         </div>
         <div class="notice notice-info">
           <h4 style="margin:0;"><%= t('admin.dashboard.contact_form') %></h4>
-            <p><%= t('admin.dashboard.contact_form_info', messages_count: @contacts.count) %></p>
+            <p><%= t('admin.dashboard.contact_form_info', messages_count: @contacts) %></p>
         </div>
     </div>
 </div>

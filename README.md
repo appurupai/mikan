@@ -5,7 +5,6 @@ This is a presentation, but I'm a bit lazy tonight. Will write it later or will 
 Maintained by  [Fnux](https://github.com/Fnux) & [Blackseep](https://github.com/L33tSheep).
 
 ## @ToDo
-* Comment everything.
 * Front-end
 * Improve translations, especially on the admin side.
 * Improve translation files. Actually it's a mess.

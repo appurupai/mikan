@@ -2,7 +2,7 @@ module ApplicationHelper
     # html title helper
     def title
         base_title = "Mikan"
-        if @title.nil?
+        if @title.nil? # if the @title variable is empty (not defined)
             base_title
         else
             "#{base_title} | #{@title}"
@@ -27,7 +27,7 @@ module ApplicationHelper
             return "<li>#{ link_to title, path}</li>"
         end
     end
-    
+
     # Navigation helper
     def li_link(title, path)
         if current_path?(path)
@@ -47,13 +47,12 @@ module ApplicationHelper
         link_to(name, '#', class: "add_fields btn btn-default btn-lg btn-block", data: {id: id, fields: fields.gsub("\n", "")})
     end
 
-    # season list
+    # Season Item : disable a button if the given url is empty
     def item_link(name, url, css_class)
         if url.nil?
             link_to name, url, :class => css_class, :disabled => true
         else
             link_to name, url, :class => css_class
         end
-
     end
 end
