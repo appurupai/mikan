@@ -7,7 +7,7 @@ Maintained by  [Fnux](https://github.com/Fnux) & [Blackseep](https://github.com/
 ## @ToDo
 * Front-end
 * Improve translations, especially on the admin side.
-* Improve translation files. Actually it's a mess.
+* Improve translation files. It's a mess.
 * Explain how to help us translating mikan
 * Allow the user to export data (CSV,XML,JSON, ?)
 * A system to suggest changes and add items. We won't pass through the contact form forever.
