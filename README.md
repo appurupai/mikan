@@ -5,11 +5,21 @@ This is a presentation, but I'm a bit lazy tonight. Will write it later or will 
 Maintained by  [Fnux](https://github.com/Fnux) & [Blackseep](https://github.com/L33tSheep).
 
 ## @ToDo
-* Comment everything (ASAP).
+* Comment everything.
+* Front-end
 * Improve translations, especially on the admin side.
 * Improve translation files. Actually it's a mess.
+* Explain how to help us translating mikan
+* Allow the user to export data (CSV,XML,JSON, ?)
 * A system to suggest changes and add items. We won't pass through the contact form forever.
+* Deploy to production...
 * Stuff.
+
+## How to help us ?
+
+Coming soon.
+
+You'll get a free hug if I see you one day.
 
 ## Setup (development)
 First, you need ruby & ruby on rails. If you're on windows, you can download [this (Ruby Installer)](http://rubyinstaller.org/) and [this (Rails Installer, require ruby)](http://railsinstaller.org/en) or switch to linux (much better <3).
