@@ -13,6 +13,8 @@ Rails.application.routes.draw do
         # get "/my/beloved/path", :to => "controller#method"      <= /!\ That's important if you want to understand. The controller method is executed just before rendering the page.
         get "/about", :to => "pages#about"
         get "/contact", :to => "pages#contact"
+        get "/export", :to => "pages#export"
+        get "/export/out", :to => "exports#out"
         get "/seasons/list", :to => "pages#seasons"
         resources :seasons, only: :show
         resources :contacts, only: :create
@@ -25,6 +27,7 @@ Rails.application.routes.draw do
             get "/pages/home", :to => "pages#home"
             get "/pages/about", :to => "pages#about"
             get "/pages/contact", :to => "pages#contact"
+            get "/pages/export", :to => "pages#export"
             get "/pages/seasons", :to => "pages#seasons"
             resources :pages, :only => [:update]
             resources :seasons # index, show, create, update, delete and everything you need (seasons)

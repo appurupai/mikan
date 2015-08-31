@@ -3,6 +3,7 @@ en:
     home: "Home"
     old_seasons: "Old Seasons"
     about: "About us"
+    export: "Export"
     contact: "Contact us"
   admin_warning:
     message: "You are logged as administrator."

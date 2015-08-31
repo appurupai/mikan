@@ -11,7 +11,9 @@ class Admin::PagesController < ApplicationController
     def contact
         @page = Page.find(4) # select the "contact us" page content
     end
-
+    def export
+        @page = Page.find(5) # select the "contact us" page content
+    end
     # update a page
     def update
         tmp = Page.find params[:id] # select a page with a given ID

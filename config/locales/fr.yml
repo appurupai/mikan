@@ -3,6 +3,7 @@ fr:
     home: "Accueil"
     old_seasons: "Aciennes Saisons"
     about: "À Propos"
+    export: "Exporter"
     contact: "Contactez-nous"
   admin_warning:
     message: "Vous êtes connecté en tant qu'administrateur."

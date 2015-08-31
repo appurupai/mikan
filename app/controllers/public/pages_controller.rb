@@ -32,4 +32,9 @@ class Public::PagesController < ApplicationController
     @title = t('nav.contact') # html title helper, see application_helper.rb
     @page = Page.find(4) # select content
   end
+  def export
+    @title = t('nav.export') # html title helper, see application_helper.rb
+    @page = Page.find(5) # select content
+    @seasons = Season.all
+  end
 end

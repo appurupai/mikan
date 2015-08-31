@@ -1,0 +1,17 @@
+<h1><%= t('nav.export') %></h1>
+<p><%= @page.content.html_safe %></p>
+
+<%= form_tag(export_out_path, method: "get") do %>
+<%= select_tag(:season_id, options_from_collection_for_select(@seasons, "id", "title"),{:class => "form-control form-ecart", prompt: "Please select a season to export :" }) %>
+<div class="row">
+  <div class="col-md-4">
+    <%= submit_tag "XML &raquo;".html_safe, class: "btn btn-default btn-block btn-lg", onClick: "$(this).closest('form').attr('action', '#{ export_out_path(format: :xml) }')"  %>
+  </div>
+  <div class="col-md-4">
+    <%= submit_tag "JSON &raquo;".html_safe, class: "btn btn-default btn-block btn-lg", onClick: "$(this).closest('form').attr('action', '#{ export_out_path(format: :json) }')"  %>
+  </div>
+  <div class="col-md-4">
+    <%= submit_tag "CSV &raquo;".html_safe, class: "btn btn-default btn-block btn-lg", onClick: "$(this).closest('form').attr('action', '#{ export_out_path(format: :csv) }')"  %>
+  </div>
+</div>
+<% end %>
