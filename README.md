@@ -5,7 +5,7 @@ Mikan is a multi-language anime charts website. You'll be able to see what will 
 Maintained by  [Fnux](https://github.com/Fnux) (Code) & [Blackseep](https://github.com/L33tSheep) (Graphic).
 
 ## @ToDo
-* Front-end [80%]
+* Front-end (actually it's just bootstrapped)
 * Create contributors' accounts.
 * A system to suggest changes and add items. We won't pass through the contact form forever.
 * Deploy to production...
