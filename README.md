@@ -5,7 +5,7 @@ Mikan is a multi-language anime charts website. You'll be able to see what will 
 Maintained by  [Fnux](https://github.com/Fnux) (Code) & [Blackseep](https://github.com/L33tSheep) (Graphic).
 
 ## @ToDo
-* Front-end [80%]
+* Front-end (actually it's just bootstrapped)
 * Create contributors' accounts.
 * A system to suggest changes and add items. We won't pass through the contact form forever.
 * Deploy to production...
@@ -13,7 +13,7 @@ Maintained by  [Fnux](https://github.com/Fnux) (Code) & [Blackseep](https://gith
 
 ## How to help us ?
 
-In order to add a new language to MIKAN, there is few things to do (xx is the locale you want to add):
+In order to add a new language to MIKAN, there is few things to do (xx is the locale you want to add) :
 * You have to create the config/locales/xx.yml file. Use config/locales/en.yml as template.
 * You have to give us a flag (.png) : app/assets/images/locales/xx.png
 * You have to add the following line in the language selector's helper (in app/helpers/application_helper.rb) :
@@ -22,7 +22,7 @@ In order to add a new language to MIKAN, there is few things to do (xx is the lo
 
 If there is anything, please contact us. We'll be glad to help you.
 
-You'll 2 free hug if we see you one day.
+You'll get 2 free hug if we see you one day.
 
 ## Setup (development)
 First, you need ruby & ruby on rails. If you're on windows, you can download [this (Ruby Installer)](http://rubyinstaller.org/) and [this (Rails Installer, require ruby)](http://railsinstaller.org/en) or switch to linux (much better :heart:).
