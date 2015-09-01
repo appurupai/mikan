@@ -1,6 +1,8 @@
 # you can see all the routes using the 'rake routes' command
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :skip => [:registrations]#, path_names: {
+    #sign_up: ''
+  #}
   devise_scope :user do
     match "/login", :to => "devise/sessions#new", via: :get
     match "/logout", :to => "devise/sessions#destroy", via: :get
