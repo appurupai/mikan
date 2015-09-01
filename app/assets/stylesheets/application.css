@@ -32,11 +32,15 @@ body {
 /* Custom page footer */
 footer {
   position: relative;
-  margin-top: 20px; 
+  margin-top: 20px;
   clear:both;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+}
+.footer-link {
+      color: #777;
+      text-decoration: none;
 }
 #language-selector {
 }
@@ -46,6 +50,8 @@ footer {
 #language-selector .language-flag {
   width: 30px;
   padding:1px;
+  margin-left:2.5px;
+  margin-right:2.5px; 
 }
 #language-selector .language-flag:hover {
   opacity: 0.5;
