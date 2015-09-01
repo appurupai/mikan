@@ -96,3 +96,6 @@ fr:
         title: "Gestion de la page : À propos."
         placeholder:
           content: "Contenu de la page."
+  time:
+    formats:
+      full: "%d/%m/%Y %H:%M"        

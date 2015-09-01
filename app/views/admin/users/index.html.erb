@@ -1,0 +1,33 @@
+<h1>Users Management <%= link_to "Add an user &raquo;".html_safe, new_admin_user_path, class: "btn btn-default btn-lg" %></h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width:5%;">#</th>
+            <th style="width:20%;">Email</th>
+            <th style="width:15%;">Création</th>
+            <th style="width:15%;">Connections</th>
+            <th style="width:15%;">Dernière connection</th>
+            <th style="width:15%;">Dernière IP</th>
+            <th style="width:25%;">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @users.each do |user| %>
+        <tr>
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td><%= l user.created_at, format: :full %></td>
+            <td><%= user.sign_in_count %></td>
+            <td><%= l user.current_sign_in_at, format: :full if user.current_sign_in_at %></td>
+            <td><%= user.current_sign_in_ip %></td>
+            <td>
+              <% if user == current_user %>
+              <span class="label label-danger">It's you !</span>
+              <% else %>
+              <%= link_to t('button.delete').html_safe, [:admin, user], :method => "delete" %>
+              <% end %>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>
