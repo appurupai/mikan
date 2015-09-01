@@ -16,6 +16,7 @@ fr:
   admin_warning:
     message: "Vous êtes connecté en tant qu'administrateur."
     admin_link: "Accéder au panel d'administration &raquo;"
+    account: "Éditer mon compte &raquo;"
     logout_link: "Déconnexion &crarr;"
   seasons:
     list: "Saison"

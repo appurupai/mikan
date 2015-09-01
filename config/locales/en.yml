@@ -16,6 +16,7 @@ en:
   admin_warning:
     message: "You are logged as administrator."
     admin_link: "Access to the administration panel &raquo;"
+    account: "Edit my account &raquo;"
     logout_link: "Logout &crarr;"
   seasons:
     list: "Season"

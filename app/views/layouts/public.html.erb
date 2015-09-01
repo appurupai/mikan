@@ -30,7 +30,7 @@
     <% if user_signed_in? %>
     <div class="notice notice-danger">
       <p><%= t("admin_warning.message") %></p>
-      <p><%= link_to t("admin_warning.admin_link").html_safe, admin_dashboard_path %> / <%= link_to t("admin_warning.logout_link").html_safe, logout_path %></p>
+      <p><%= link_to t("admin_warning.admin_link").html_safe, admin_dashboard_path %> / <%= link_to t("admin_warning.account").html_safe, me_path %>  / <%= link_to t("admin_warning.logout_link").html_safe, logout_path %></p>
     </div>
     <% end %>
     <!-- Page Content -->

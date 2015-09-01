@@ -21,5 +21,14 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  database: app_mikan
+  username: mikan
+  password: dontlookatmeplz
+  host: localhost
+  socket: <%=
+  ['/opt/local/var/run/mysql5/mysqld.sock',
+  '/opt/local/var/run/mysqld/mysqld.sock',
+  '/var/run/mysqld/mysqld.sock',
+  '/tmp/mysql.sock'].select { |f| File.exist? f }.first %>
