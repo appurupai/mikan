@@ -1,5 +1,5 @@
-<h1>Manage Page : About <%= link_to "Back &crarr;".html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
+<h1><%= t('admin.pages.about.title')%>  <%= link_to t('button.back').html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
 <%= form_for [:admin,@page] do |f| %>
-<%= f.text_area :content, class: "form-control form-ecart", placeholder: "Contenu de la page.", rows: 30 %>
-<%= f.submit "Save &raquo;".html_safe, class: "btn btn-default btn-block btn-lg" %>
+<%= f.text_area :content, class: "form-control form-ecart", placeholder: t('admin.pages.about.placeholder.content'), rows: 30 %>
+<%= f.submit t('button.save').html_safe, class: "btn btn-default btn-block btn-lg" %>
 <% end %>

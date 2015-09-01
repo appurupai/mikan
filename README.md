@@ -6,16 +6,21 @@ Maintained by  [Fnux](https://github.com/Fnux) (Code) & [Blackseep](https://gith
 
 ## @ToDo
 * Front-end [80%]
-* Improve translations, especially on the admin side.
-* Improve translation files. It's a mess.
-* Explain how to help us translating mikan.
+* Create contributors' accounts.
 * A system to suggest changes and add items. We won't pass through the contact form forever.
 * Deploy to production...
 * Stuff.
 
 ## How to help us ?
 
-Coming soon.
+In order to add a new language to MIKAN, there is few things to do (xx is the locale you want to add):
+* You have to create the config/locales/xx.yml file. Use config/locales/en.yml as template.
+* You have to give us a flag (.png) : app/assets/images/locales/xx.png
+* You have to add the following line in the language selector's helper (in app/helpers/application_helper.rb) :
+
+`(link_to image_tag("locales/xx.png",  class: "language-flag #{"current-language" if locale == "xx" }"),  params.merge(:locale => "xx"))`
+
+If there is anything, please contact us. We'll be glad to help you.
 
 You'll 2 free hug if we see you one day.
 

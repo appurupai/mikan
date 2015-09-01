@@ -1,14 +1,14 @@
-<h1>Manage Page : Contact <%= link_to "Back &crarr;".html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
+<h1><%= t('admin.pages.contact.title')%>  <%= link_to t('button.back').html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
 <%= form_for [:admin,@page] do |f| %>
 <div class="row">
     <div class="col-md-9">
-        <%= f.text_area :content, class: "form-control form-ecart", placeholder: "Contenu du message.", rows: 10 %>
+        <%= f.text_area :content, class: "form-control form-ecart", placeholder: t('admin.pages.contact.placeholder.content'), rows: 10 %>
     </div>
     <div class="col-md-3">
         <div class="notice notice-info">
-            <p>Le champ ci-dessus se réfère au message situé au dessus du formalaire de contact, dans la partie publique du site.</p>
+            <p><%= t('admin.pages.contact.note') %></p>
         </div>
-        <%= f.submit "Save &raquo;".html_safe, class: "btn btn-default btn-block btn-lg" %>
+        <%= f.submit t('button.save').html_safe, class: "btn btn-default btn-block btn-lg" %>
     </div>
 </div>
 <% end %>

@@ -4,7 +4,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th style="width:90%;"><%= t('season.list') %></th>
+            <th style="width:90%;"><%= t('seasons.list') %></th>
             <th style="width:10%;"></th>
         </tr>
     </thead>
@@ -12,7 +12,7 @@
         <% @seasons.each do |season| %>
         <tr>
             <td><%= season.title %></td>
-            <td><%= link_to t('season.show_me').html_safe, season %></td>
+            <td><%= link_to t('button.show_me').html_safe, season %></td>
         </tr>
         <% end %>
     </tbody>

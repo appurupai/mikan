@@ -5,7 +5,7 @@
             <th style="width:5%;">#</th>
             <th style="width:70%;"><%= t('admin.seasons.season') %></th>
             <th style="width:5%;"><%= t('admin.seasons.items') %></th>
-            <th style="width:20%;"><%= t('admin.seasons.actions') %></th>
+            <th style="width:20%;"><%= t('button.actions') %></th>
         </tr>
     </thead>
     <tbody>
@@ -14,7 +14,7 @@
             <td><%= season.id %></td>
             <td><%= season.title %></td>
             <td><%= season.items.count %></td>
-            <td><%= link_to t('admin.seasons.edit').html_safe, edit_admin_season_path(season) %> / <%= link_to t('admin.seasons.delete').html_safe, [:admin, season], :method => "delete" %></td>
+            <td><%= link_to t('button.edit').html_safe, edit_admin_season_path(season) %> / <%= link_to t('button.delete').html_safe, [:admin, season], :method => "delete" %></td>
         </tr>
         <% end %>
     </tbody>

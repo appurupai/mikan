@@ -9,7 +9,7 @@
       <%= f.file_field :image %><br />
       <%= f.text_field :hummingbird_url, placeholder: "HummingBird", class: "form-control form-ecart" %>
       <%= f.text_field :official_url, placeholder: "Official", class: "form-control form-ecart" %>
-      <%= link_to "Remove", '#', class: "remove_fields btn btn-danger btn-block btn-lg" %>
+      <%= link_to  t('button.remove'), '#', class: "remove_fields btn btn-danger btn-block btn-lg" %>
     </div>
   </div>
   <%= f.hidden_field :category, :value => "show" %>

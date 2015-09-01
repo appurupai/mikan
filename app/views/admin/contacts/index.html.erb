@@ -1,4 +1,4 @@
-<h1>Contact Form</h1>
+<h1><%= t('admin.title.contact_form') %></h1>
 <% if @contacts.count == 0 %>
 <div class="notice notice-warning" >
   <p>No one here.</p>
@@ -7,7 +7,7 @@
 <% @contacts.all.each do |contact| %>
 <blockquote>
   <p><%= contact.message %></p>
-  <footer><%= contact.name %> <cite title="Source"><%= contact.mail %></cite> // <%= contact.created_at %> >> <%= link_to "Delete &raquo;".html_safe, [:admin, contact], :method => 'delete' %></footer>
+  <footer><%= contact.name %> <cite title="Source"><%= contact.mail %></cite> // <%= contact.created_at %> >> <%= link_to t('button.delete').html_safe, [:admin, contact], :method => 'delete' %></footer>
 </blockquote>
 <% end %>
 <% end %>
