@@ -80,7 +80,7 @@ en:
         note: "Please select the season to display on the main page."
       seasons:
         title: "Manage Page : Seasons list"
-        note: "@EN: Le champ ci-contre se réfère au message situé au dessus de la liste des saisons, dans la partie publique du site."
+        note: "This field is about the message put on top of the season's list, in the public area of this website."
         placeholder:
           content: "Message"
       export:
