@@ -1,4 +1,5 @@
 class Admin::ContactsController < ApplicationController
+    before_filter :is_admin?
     def index
         @contacts = Contact.all.order("CREATED_AT DESC") # select all the messages
     end

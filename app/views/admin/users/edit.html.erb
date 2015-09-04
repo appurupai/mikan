@@ -1,0 +1,11 @@
+<%= form_for [:admin, @user] do |f| %>
+<h1><%= t('panel.users.edit') %> <%= link_to "Back &crarr;".html_safe, admin_users_path, class: "btn btn-default btn-lg" %></h1>
+<div class="row">
+  <div class="col-md-6">
+    <%= f.select(:admin, [[t('panel.users.account.contributor'), 0], [t('panel.users.account.administrator'), 1]],{}, {:class => "form-control",}) %>
+  </div>
+  <div class="col-md-6">
+    <%= f.submit t("button.update").html_safe, :class => "btn btn-success btn-block" %>
+  </div>
+</div>
+<% end %>

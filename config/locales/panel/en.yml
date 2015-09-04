@@ -1,0 +1,81 @@
+en:
+  panel:
+      title:
+        admin: "Admin"
+        seasons: "Seasons"
+        pages: "Pages"
+        users: "Users"
+        contact_form: "Contact Form"
+        back: "Back to the public area &crarr;"
+      login:
+        title: "Mikan - Login"
+        placeholder:
+          email: "Email Address"
+          password: "Password"
+      dashboard:
+        manage_home: "Manage Home Page"
+        last_season: "Edit Last Season"
+        seasons_list: "Manage Seasons List"
+        contact_form: "Contact Form"
+        home_page: "Home Page"
+        home_info: "Announcement : %{announcement} // Season : %{season}"
+        stats: "Statistics"
+        stats_info: "There are %{seasons_count} seasons for a totalt of %{items_count} items. See <a href=\"http://piwik.fnux.ch/\">http://piwik.fnux.ch/</a> for stats about visits."
+        contact_form_info: "There are %{messages_count} messages form the contact form."
+      seasons:
+        title: "Seasons Management"
+        new: "Add a new season &raquo;"
+        season: "Season"
+        items: "Items"
+        add:
+          show: "Add a show &raquo;"
+          special: "Add a special/OVA &raquo;"
+          movie: "Add a movie &raquo;"
+      users:
+        title: "Users Management"
+        add: "Create a new user &raquo;"
+        new: "Create a new user"
+        edit: "Edit User"
+        field:
+          email: "Email"
+          created_at: "Creation"
+          sign_in_count: "Sign in count"
+          last_login: "Last login"
+          last_ip: "Last IP"
+          account_type: "Account type"
+        account:
+          administrator: "Administrator"
+          contributor: "Contributor"
+          you: "It's you !"
+        placeholder:
+          email: "Email"
+          password: "Password"
+      contact:
+        empty: "There is nothing here."
+      pages:
+        home:
+          title: "Manage Home Page"
+          alert_on: "Alert ON"
+          alert_off: "Alert OFF"
+          placeholder:
+            title: "Title"
+            content: "Message"
+          note: "Please select the season to display on the main page."
+        seasons:
+          title: "Manage Page : Seasons list"
+          note: "This field is about the message put on top of the season's list, in the public area of this website."
+          placeholder:
+            content: "Message"
+        export:
+          title: "Manage Page : Export"
+          placeholder:
+            content: "Content of the page."
+        contact:
+          title: "Manage Page : Contact Us"
+          note: "This field allows you to edit the contact page."
+          placeholder:
+            content: "Content of the page."
+        about:
+          title: "Manage Page : About Us"
+          placeholder:
+            content: "Content of the page."

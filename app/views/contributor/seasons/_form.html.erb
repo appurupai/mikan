@@ -1,0 +1,62 @@
+<%= f.text_field :title, placeholder: "Period", class: "form-control form-ecart" %>
+<%= f.text_area :notice, placeholder: "Message", class: "form-control form-ecart" %>
+<br />
+<div class="container">
+  <ul class="nav nav-tabs">
+    <li class="nav active"><a href="#shows" data-toggle="tab"><%= t('seasons.shows') %></a></li>
+    <li class="nav"><a href="#specials" data-toggle="tab"><%= t('seasons.specials') %></a></li>
+    <li class="nav"><a href="#movies" data-toggle="tab"><%= t('seasons.movies') %></a></li>
+  </ul>
+
+  <% if @season.nil? %>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="shows">
+      <br />
+      <%= f.fields_for :items do |builder| %>
+      <%= render 'show_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields(t('panel.seasons.add.show').html_safe , f, :items, "show")%>
+    </div>
+    <div class="tab-pane fade" id="specials">
+      <br />
+      <%= f.fields_for :items do |builder| %>
+      <%= render 'special_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields(t('panel.seasons.add.special').html_safe , f, :items, "special")%>
+    </div>
+    <div class="tab-pane fade" id="movies">
+      <br />
+      <%= f.fields_for :items do |builder| %>
+      <%= render 'movie_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields(t('panel.seasons.add.movie').html_safe , f, :items, "movie")%>
+    </div>
+  </div>
+  <% else %>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="shows">
+      <br />
+      <%= f.fields_for :items, @season.items.where(category: "show") do |builder| %>
+      <%= render 'show_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields(t('panel.seasons.add.show').html_safe , f, :items, "show")%>
+    </div>
+    <div class="tab-pane fade" id="specials">
+      <br />
+      <%= f.fields_for :items, @season.items.where(category: "special") do |builder| %>
+      <%= render 'special_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields(t('panel.seasons.add.special').html_safe , f, :items, "special")%>
+    </div>
+    <div class="tab-pane fade" id="movies">
+      <br />
+      <%= f.fields_for :items, @season.items.where(category: "movie") do |builder| %>
+      <%= render 'movie_fields', f: builder %>
+      <% end %>
+      <%= link_to_add_fields(t('panel.seasons.add.movie').html_safe , f, :items, "movie")%>
+    </div>
+  </div>
+  <% end %>
+</div>

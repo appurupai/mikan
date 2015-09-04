@@ -1,20 +1,20 @@
-<h1><%= t('admin.pages.home.title')%> <%= link_to t('button.back').html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
+<h1><%= t('panel.pages.home.title')%> <%= link_to t('button.back').html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
 <%= form_for [:admin,@page] do |f| %>
 <div class="row">
   <div class="col-md-9">
     <div class="well well-small">
       <% if @page.alert %>
-      <%= f.select(:alert, [[t('admin.pages.home.alert_on'), 1],[t('admin.pages.home.alert_off'), 0]], {}, class: "form-control form-ecart") %>
+      <%= f.select(:alert, [[t('panel.pages.home.alert_on'), 1],[t('panel.pages.home.alert_off'), 0]], {}, class: "form-control form-ecart") %>
       <% else %>
-      <%= f.select(:alert, [[t('admin.pages.home.alert_off'), 0],[t('admin.pages.home.alert_on'), 1]], {}, class: "form-control form-ecart") %>
+      <%= f.select(:alert, [[t('panel.pages.home.alert_off'), 0],[t('panel.pages.home.alert_on'), 1]], {}, class: "form-control form-ecart") %>
       <% end %>
-      <%= f.text_field :title, class: "form-control form-ecart", placeholder: t('admin.pages.home.placeholder.title') %>
-      <%= f.text_area :content, class: "form-control form-ecart", placeholder: t('admin.pages.home.placeholder.content'), rows: 5 %>
+      <%= f.text_field :title, class: "form-control form-ecart", placeholder: t('panel.pages.home.placeholder.title') %>
+      <%= f.text_area :content, class: "form-control form-ecart", placeholder: t('panel.pages.home.placeholder.content'), rows: 5 %>
     </div>
   </div>
   <div class="col-md-3">
     <div class="notice notice-info">
-      <p><%= t('admin.pages.home.note') %></p>
+      <p><%= t('panel.pages.home.note') %></p>
     </div>
     <%= f.select(:season_id, Season.all.collect {|p| [ p.title, p.id ] }, {include_blank: 'None'}, class: "form-control form-ecart") %>
     <%= f.submit t('button.save').html_safe, class: "btn btn-default btn-block btn-lg" %>

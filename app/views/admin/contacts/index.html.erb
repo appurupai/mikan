@@ -1,7 +1,7 @@
 <h1><%= t('admin.title.contact_form') %></h1>
 <% if @contacts.count == 0 %>
 <div class="notice notice-warning" >
-  <p>No one here.</p>
+  <p><%= t('panel.contact.empty') %></p>
 </div>
 <% else %>
 <% @contacts.all.each do |contact| %>

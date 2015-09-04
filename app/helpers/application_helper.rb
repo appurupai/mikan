@@ -16,8 +16,8 @@ module ApplicationHelper
 
   # language selector
   def language_selector(locale)
-    (link_to image_tag("locales/fr.png", class: "language-flag #{"current-language" if locale == "fr" || locale.nil? }"), params.merge(:locale => "fr")) +
-    (link_to image_tag("locales/en.png",  class: "language-flag #{"current-language" if locale == "en" }"),  params.merge(:locale => "en"))
+    (link_to image_tag("locales/en.png",  class: "language-flag #{"current-language" if locale == "en" }"),  params.merge(:locale => "en")) +
+    (link_to image_tag("locales/fr.png", class: "language-flag #{"current-language" if locale == "fr" || locale.nil? }"), params.merge(:locale => "fr")) 
   end
 
   # test if the given path is the current path

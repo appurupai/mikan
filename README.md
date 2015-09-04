@@ -5,16 +5,14 @@ Mikan is a multi-language anime charts website. You'll be able to see what will 
 Maintained by  [Fnux](https://github.com/Fnux) (Code) & [Blackseep](https://github.com/L33tSheep) (Graphic).
 
 ## @ToDo
+
 * Front-end (actually it's just bootstrapped)
-* Create contributors' accounts.
-* A system to suggest changes and add items. We won't pass through the contact form forever.
-* Deploy to production...
 * Stuff.
 
 ## How to help us ?
 
 In order to add a new language to MIKAN, there is few things to do (xx is the locale you want to add) :
-* You have to create the config/locales/xx.yml file. Use config/locales/en.yml as template.
+* In config/locales/, you have to create at least public/xx.yml and general/xx.yml. Use en.yml as template.
 * You have to give us a flag (.png) : app/assets/images/locales/xx.png
 * You have to add the following line in the language selector's helper (in app/helpers/application_helper.rb) :
 

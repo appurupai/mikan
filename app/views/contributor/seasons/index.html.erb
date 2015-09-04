@@ -1,4 +1,5 @@
-<h1><%= t('panel.seasons.title') %> <%= link_to t('panel.seasons.new').html_safe, new_admin_season_path, class: "btn btn-default btn-lg" %></h1>
+<h1><%= t('panel.seasons.title') %> <%= link_to t('panel.seasons.new').html_safe, new_contributor_season_path, class: "btn btn-default btn-lg" %></h1>
+
 <table class="table">
     <thead>
         <tr>
@@ -14,7 +15,7 @@
             <td><%= season.id %></td>
             <td><%= season.title %></td>
             <td><%= season.items.count %></td>
-            <td><%= link_to t('button.edit').html_safe, edit_admin_season_path(season) %> / <%= link_to t('button.delete').html_safe, [:admin, season], :method => "delete" %></td>
+            <td><%= link_to t('button.edit').html_safe, edit_contributor_season_path(season) %> / <%= link_to t('button.delete').html_safe, [:contributor, season], :method => "delete" %></td>
         </tr>
         <% end %>
     </tbody>

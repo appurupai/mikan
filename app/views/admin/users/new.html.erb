@@ -1,13 +1,13 @@
 <%= form_for [:admin, @user] do |f| %>
-<h1>Add a new user <%= link_to "Back &crarr;".html_safe, admin_users_path, class: "btn btn-default btn-lg" %></h1>
+<h1><%= t('panel.users.new') %> <%= link_to t('button.back').html_safe, admin_users_path, class: "btn btn-default btn-lg" %></h1>
 <div class="row">
   <div class="col-md-6">
-    <%= f.email_field :email, class: "form-control form-ecart", :placeholder => "Email" %>
-    <%= select_tag(:nothing, {}, :class => "form-control") %>
+    <%= f.email_field :email, class: "form-control form-ecart", :placeholder => t('panel.users.placeholder.email') %>
+    <%= f.select(:admin, [[t('panel.users.account.contributor'), 0], [t('panel.users.account.administrator'), 1]],{}, {:class => "form-control",}) %>
   </div>
   <div class="col-md-6">
-    <%= f.password_field :password, class: "form-control form-ecart", :placeholder => "Password" %>
-    <%= f.submit "Save &raquo;".html_safe, :class => "btn btn-success btn-block" %>
+    <%= f.password_field :password, class: "form-control form-ecart", :placeholder => t('panel.users.placeholder.password')%>
+    <%= f.submit t('button.save').html_safe, :class => "btn btn-success btn-block" %>
   </div>
 </div>
 <% end %>

@@ -3,12 +3,12 @@
 <%= form_for Contact.new do |f| %>
 <div class="row">
   <div class="col-md-6">
-    <%= f.text_field :name, class: "form-control form-ecart", placeholder:  t('contact.name') %>
+    <%= f.text_field :name, class: "form-control form-ecart", placeholder:  t('page.contact.name') %>
   </div>
   <div class="col-md-6">
-    <%= f.email_field :mail, class: "form-control form-ecart", placeholder:  t('contact.email') %>
+    <%= f.email_field :mail, class: "form-control form-ecart", placeholder:  t('page.contact.email') %>
   </div>
 </div>
-<%= f.text_area :message, class: "form-control form-ecart", rows: 5, placeholder: t('contact.content') %>
-<%= f.submit "Send &raquo;".html_safe, class: "btn btn-default btn-lg btn-block" %>
+<%= f.text_area :message, class: "form-control form-ecart", rows: 5, placeholder: t('page.contact.content') %>
+<%= f.submit t("button.send").html_safe, class: "btn btn-default btn-lg btn-block" %>
 <% end %>

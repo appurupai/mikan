@@ -1,0 +1,39 @@
+en:
+  title:
+    home: "Home"
+    seasons: "All Seasons"
+    export: "Export"
+    about: "About us"
+    contact: "Contact us !"
+  notification:
+    user:
+      admin:
+        message: "You are logged as administrator."
+        panel: "Access to the administration panel &raquo;"
+      contributor:
+        message: "You are logged as contributor."
+        panel: "Access to the contributor panel &raquo;"
+      account: "Edit my account &raquo;"
+    contact:
+      error: "The message was not send. Please check if there is any empty field. You can also contact us on twitter (@fnux_ch, @moutonnoireu)."
+      success: "Message sent !"
+  page:
+    seasons:
+      list: "Season"
+      suggest: "Suggest a change &raquo;"
+      shows: "Shows"
+      specials: "Specials / OVA"
+      movies: "Movies"
+      hummingbird: "Hummingbird"
+      official_website: "Website &raquo;"
+      empty: "It's empty :/"
+      order:
+        alphabetical: "Alphabetical Order"
+        airing: "Airing Date"
+        latest: "Latest Items"
+    contact:
+      email: "Your email address (Required)"
+      name: "Your pseudo/name (Required)"
+      content: "Content of the message... (Required)"
+    export:
+      select: "Please select a season to export :"

@@ -13,27 +13,13 @@
     <div class="header clearfix">
       <nav>
         <ul class="nav nav-pills pull-right">
-          <%= li_link(t('panel.nav.admin'),admin_dashboard_path).html_safe %>
-          <%= li_controller_link(t('panelnav.seasons'),admin_seasons_path, "seasons").html_safe %>
-          <li role="presentation" class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-              <%= t('panel.title.pages') %> <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><%= link_to t('title.home'), admin_pages_home_path %></li>
-              <li><%= link_to t('title.old_seasons'), admin_pages_seasons_path %></li>
-              <li><%= link_to t('title.about'), admin_pages_about_path %></li>
-              <li><%= link_to t('title.export'), admin_pages_export_path %></li>
-              <li><%= link_to t('title.contact'), admin_pages_contact_path %></li>
-            </ul>
-          </li>
-          <%= li_link(t('panel.title.users'),admin_users_path).html_safe %>
-          <%= li_link(t('panel.title.contact_form'),admin_contacts_path).html_safe %>
+          <%= li_link(t('panel.title.admin'),contributor_dashboard_path).html_safe %>
+          <%= li_controller_link(t('panel.title.seasons'),contributor_seasons_path, "seasons").html_safe %>
           <%= li_link(t('panel.title.back').html_safe,root_path).html_safe %>
         </ul>
       </nav>
       <h3 class="text-muted">
-        <%= link_to image_tag("mikan.png", :style => "width:50px;"), admin_dashboard_path %>  Mikan - Admin
+        <%= link_to image_tag("mikan.png", :style => "width:50px;"), contributor_dashboard_path %> Mikan - <%= t('panel.users.account.contributor') %>
         <span id="language-selector">
           <%= language_selector(params[:locale]) %>
         </span>

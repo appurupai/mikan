@@ -1,14 +1,15 @@
-<h1>Users Management <%= link_to "Add an user &raquo;".html_safe, new_admin_user_path, class: "btn btn-default btn-lg" %></h1>
+<h1><%= t('panel.users.title') %> <%= link_to t('panel.users.add').html_safe, new_admin_user_path, class: "btn btn-default btn-lg" %></h1>
 <table class="table">
     <thead>
         <tr>
             <th style="width:5%;">#</th>
-            <th style="width:20%;">Email</th>
-            <th style="width:15%;">Création</th>
-            <th style="width:15%;">Connections</th>
-            <th style="width:15%;">Dernière connection</th>
-            <th style="width:15%;">Dernière IP</th>
-            <th style="width:25%;">Actions</th>
+            <th style="width:20%;"><%= t('panel.users.field.email') %></th>
+            <th style="width:15%;"><%= t('panel.users.field.created_at') %></th>
+            <th style="width:10%;"><%= t('panel.users.filed.sign_in_count') %></th>
+            <th style="width:15%;"><%= t('panel.users.field.last_login') %></th>
+            <th style="width:10%;"><%= t('panel.users.field.last_ip') %></th>
+            <th style="width:10%;"><%= t('panel.users.field.account_type') %></th>
+            <th style="width:15%;"><%= t('button.actions') %></th>
         </tr>
     </thead>
     <tbody>
@@ -21,10 +22,17 @@
             <td><%= l user.current_sign_in_at, format: :full if user.current_sign_in_at %></td>
             <td><%= user.current_sign_in_ip %></td>
             <td>
-              <% if user == current_user %>
-              <span class="label label-danger">It's you !</span>
+              <% if user.try(:admin) %>
+                <span class="label label-danger"><%= t('panel.users.account.administrator') %></span>
               <% else %>
-              <%= link_to t('button.delete').html_safe, [:admin, user], :method => "delete" %>
+                <span class="label label-success"><%= t('panel.users.account.contributor') %></span>
+              <% end %>
+            </td>
+            <td>
+              <% if user == current_user %>
+              <span class="label label-danger"><%= t('panel.users.account.you') %></span>
+              <% else %>
+              <%= link_to t('button.edit').html_safe, edit_admin_user_path(user) %> / <%= link_to t('button.delete').html_safe, [:admin, user], :method => "delete" %>
               <% end %>
             </td>
         </tr>

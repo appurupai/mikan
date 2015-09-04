@@ -1,0 +1,4 @@
+<%= form_for [:contributor, @period] do |f| %>
+<h1>Add a new period <%= f.submit "Save &raquo;".html_safe, :class => "btn btn-success btn-lg" %> <%= link_to "Back &crarr;".html_safe, contributor_seasons_path, class: "btn btn-default btn-lg" %></h1>
+<%= render "form", f: f %>
+<% end %>

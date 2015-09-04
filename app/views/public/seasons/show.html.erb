@@ -1,18 +1,18 @@
 <header class="notice notice-info">
     <h1>Mikan : <%= @season.title %></h1>
     <p><%= @season.notice.html_safe %></p>
-    <p><%= link_to t('seasons.suggest').html_safe, contact_path, class: "btn btn-primary" %> <%= link_to t('button.back').html_safe, seasons_list_path, class: "btn btn-success" %></p>
+    <p><%= link_to t('page.seasons.suggest').html_safe, contact_path, class: "btn btn-primary" %> <%= link_to t('button.back').html_safe, seasons_list_path, class: "btn btn-success" %></p>
 </header>
 
 <div class="row">
   <div class="col-lg-7">
-    <h3><%= t('seasons.shows') %></h3>
+    <h3><%= t('page.seasons.shows') %></h3>
   </div>
   <div class="col-lg-5">
     <div class="btn-group" style="margin-top:15px;">
-      <%= link_to t('seasons.order.alphabetical'), params.merge(:order => "title"), class: "btn btn-default" %>&nbsp;
-      <%= link_to t('seasons.order.airing'), params.merge(:order => "airing_from"), class: "btn btn-default" %>&nbsp;
-      <%= link_to t('seasons.order.latest'), params.merge(:order => "created_at"), class: "btn btn-default" %>&nbsp;
+      <%= link_to t('page.seasons.order.alphabetical'), params.merge(:order => "title"), class: "btn btn-default" %>&nbsp;
+      <%= link_to t('page.seasons.order.airing'), params.merge(:order => "airing_from"), class: "btn btn-default" %>&nbsp;
+      <%= link_to t('page.seasons.order.latest'), params.merge(:order => "created_at"), class: "btn btn-default" %>&nbsp;
     </div>
   </div>
 </div>
@@ -25,7 +25,7 @@
 
 <div class="row">
   <div class="col-lg-12">
-    <h3><%= t('seasons.specials') %></h3>
+    <h3><%= t('page.seasons.specials') %></h3>
   </div>
 </div>
 <hr />
@@ -37,7 +37,7 @@
 
 <div class="row">
   <div class="col-lg-12">
-    <h3><%= t('seasons.movies') %></h3>
+    <h3><%= t('page.seasons.movies') %></h3>
   </div>
 </div>
 <hr />

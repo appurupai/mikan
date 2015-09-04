@@ -1,55 +1,17 @@
 fr:
-  title:
-    home: "Accueil"
-    old_seasons: "Aciennes Saisons"
-    about: "À Propos"
-    export: "Exporter"
-    contact: "Contactez-nous"
-  button:
-    show_me: "Voir &raquo;"
-    back: "Retour &crarr;"
-    actions: "Actions"
-    edit: "Éditer &raquo;"
-    delete: "Supprimer &raquo;"
-    save: "Sauvegarder &raquo;"
-    remove: "Supprimer"
-  admin_warning:
-    message: "Vous êtes connecté en tant qu'administrateur."
-    admin_link: "Accéder au panel d'administration &raquo;"
-    account: "Éditer mon compte &raquo;"
-    logout_link: "Déconnexion &crarr;"
-  seasons:
-    list: "Saison"
-    suggest: "Proposer une modification &raquo;"
-    shows: "Animes"
-    specials: "Speciaux / OAV"
-    movies: "Films"
-    hummingbird: "Hummingbird"
-    official_website: "Site Officiel &raquo;"
-    empty: "Il n'y a rien ici :/"
-    order:
-      alphabetical: "Ordre Alphabétique"
-      airing: "Date de diffusion"
-      latest: "Derniers Ajouts"
-  contact:
-    email: "Addresse Email (Obligatoire)"
-    name: "Nom/Pseudo (Obligatoire)"
-    content: "Contenu du message... (Obligatoire)"
-    send: "Envoyer &raquo;"
-  export:
-    select: "Sélectionnez un saison à exporter :"
-  footer:
-    login: "Connexion &raquo"
-  flash:
-    contact_error: "Votre message n'a pas été envoyé. Veuillez vérifier qu'il n'y ai aucun champ vide. Vous pouvez aussi nous contacter sur Twitter (@moutonnoireu, @fnux_ch)."
-    contact_success: "Message envoyé !"
-  admin:
+  panel:
     title:
       admin: "Admin"
       seasons: "Saisons"
       pages: "Pages"
+      users: "Utilisateurs"
       contact_form: "Formulaire de contact"
       back: "Retour à la partie publique &crarr;"
+    login:
+      title: "Mikan - Connexion"
+      placeholder:
+        email: "Addresse Email"
+        password: "Mot de passe"
     dashboard:
       manage_home: "Gestion de la page d'accueil"
       last_season: "Mofidier la dernière saison"
@@ -69,6 +31,27 @@ fr:
         show: "Ajouter un anime &raquo;"
         special: "Ajouter un spécial/OAV &raquo;"
         movie: "Ajouter un film &raquo;"
+    users:
+      title: "Gestion des Utilisateurs"
+      add: "Créer un utilisateur &raquo;"
+      new: "Créer un utilisateur"
+      edit: "Modifier l'utilisateur"
+      field:
+        email: "Email"
+        created_at: "Création"
+        sign_in_count: "Connections"
+        last_login: "Dernière Connection"
+        last_ip: "Dernière IP"
+        account_type: "Type du compte"
+      account:
+        administrator: "Administrateur"
+        contributor: "Contributeur"
+        you: "C'est vous !"
+      placeholder:
+        email: "Email"
+        password: "Mot de passe"
+    contact:
+      empty: "Il n'y a aucun message."
     pages:
       home:
         title: "Gestiond de la page d'Accueil"
@@ -96,6 +79,3 @@ fr:
         title: "Gestion de la page : À propos."
         placeholder:
           content: "Contenu de la page."
-  time:
-    formats:
-      full: "%d/%m/%Y %H:%M"        

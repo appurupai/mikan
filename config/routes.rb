@@ -33,10 +33,14 @@ Rails.application.routes.draw do
       get "/pages/contact", :to => "pages#contact"
       get "/pages/export", :to => "pages#export"
       get "/pages/seasons", :to => "pages#seasons"
-      resources :users, :only => [:new, :index, :create, :destroy]
+      resources :users, :only => [:new, :index, :create, :destroy, :edit, :update]
       resources :pages, :only => [:update]
       resources :seasons # index, show, create, update, delete and everything you need (seasons)
       resources :contacts # index, show, create, update, delete and everything you need (contact messages)
+    end
+    namespace :contributor do
+        get "/dashboard", :to => "dashboard#index"
+        resources :seasons
     end
   end
 end

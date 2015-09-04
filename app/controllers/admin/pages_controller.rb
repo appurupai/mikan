@@ -1,4 +1,5 @@
 class Admin::PagesController < ApplicationController
+    before_filter :is_admin?
     def home
         @page = Page.find(1) # select the "home" page content
     end

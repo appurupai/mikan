@@ -1,0 +1,16 @@
+en:
+  button:
+    show_me: "Show me &raquo;"
+    back: "Back &crarr;"
+    actions: "Actions"
+    edit: "Edit &raquo;"
+    delete: "Delete &raquo;"
+    save: "Save &raquo;"
+    update: "Update &raquo;"
+    remove: "Remove"
+    logout: "Logout &crarr;"
+    login: "Login &raquo"
+    send: "Send &raquo;"  
+  time:
+    formats:
+      full: "%d/%m/%Y %H:%M"

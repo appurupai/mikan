@@ -1,5 +1,5 @@
 class Admin::UsersController < ApplicationController
-
+  before_filter :is_admin?
   def index
     @users = User.all.order("CREATED_AT DESC") # select all the users, from the first added one to the last added one
   end
@@ -16,9 +16,22 @@ class Admin::UsersController < ApplicationController
       redirect_to :back
     end
   end
-  
+
+  def edit
+    @user = User.find params[:id]
+  end
+
+  def update
+    tmp = User.find params[:id] # select a season with a given ID
+    if tmp.update_attributes(:admin => params[:user][:admin])  # if it's saved
+      redirect_to admin_users_path
+    else
+      redirect_to :back
+    end
+  end
+
   def destroy
-    User.destroy params[:id]  # select an user with a given ID
+    User.destroy params[:id]  # select an user with a given ID and destroy it
     redirect_to admin_users_path
   end
 
@@ -27,6 +40,6 @@ class Admin::UsersController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email, :password, :admin)
   end
 end

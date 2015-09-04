@@ -1,5 +1,5 @@
-class Admin::SeasonsController < ApplicationController
-    before_filter :is_admin?
+class Contributor::SeasonsController < ApplicationController
+
   def index
     @seasons = Season.all.order("CREATED_AT DESC") # select all the seasons, from the first added one to the last added one
   end
@@ -11,7 +11,7 @@ class Admin::SeasonsController < ApplicationController
   def create # ... and save it
     tmp = Season.new(season_params)
     if tmp.save # if the season is saved
-      redirect_to admin_seasons_path
+      redirect_to contributor_seasons_path
     else
       redirect_to :back
     end
@@ -25,7 +25,7 @@ class Admin::SeasonsController < ApplicationController
   def update
     tmp = Season.find params[:id] # select a season with a given ID
     if tmp.update_attributes(season_params)  # if it's saved
-      redirect_to admin_seasons_path
+      redirect_to contributor_seasons_path
     else
       redirect_to :back
     end
@@ -33,7 +33,7 @@ class Admin::SeasonsController < ApplicationController
 
   def destroy
     Season.destroy params[:id]  # select a season with a given ID
-    redirect_to admin_seasons_path
+    redirect_to contributor_seasons_path
   end
 
   # the following is only available and can only be accessible from this controller (you can't call it from the outside)

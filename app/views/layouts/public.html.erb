@@ -14,9 +14,9 @@
       <nav>
         <ul class="nav nav-pills pull-right">
           <%= li_link(t('title.home'),root_path).html_safe %>
-          <%= li_controller_link(t('title.old_seasons'),seasons_list_path, "seasons").html_safe %>
-          <%= li_link(t('title.about'),about_path).html_safe %>
+          <%= li_controller_link(t('title.seasons'),seasons_list_path, "seasons").html_safe %>
           <%= li_link(t('title.export'),export_path).html_safe %>
+          <%= li_link(t('title.about'),about_path).html_safe %>
           <%= li_link(t('title.contact'),contact_path).html_safe %>
         </ul>
       </nav>
@@ -28,10 +28,17 @@
       </h3>
     </div>
     <% if user_signed_in? %>
-    <div class="notice notice-danger">
-      <p><%= t("admin_warning.message") %></p>
-      <p><%= link_to t("admin_warning.admin_link").html_safe, admin_dashboard_path %> / <%= link_to t("admin_warning.account").html_safe, me_path %>  / <%= link_to t("admin_warning.logout_link").html_safe, logout_path %></p>
-    </div>
+      <% if current_user.admin? %>
+      <div class="notice notice-danger">
+        <p><%= t("notification.user.admin.message") %></p>
+        <p><%= link_to t("notification.user.admin.panel").html_safe, admin_dashboard_path %> / <%= link_to t("notification.user.account").html_safe, me_path %>  / <%= link_to t("button.logout").html_safe, logout_path %></p>
+      </div>
+      <% else %>
+      <div class="notice notice-success">
+        <p><%= t("notification.user.contributor.message") %><</p>
+        <p><%= link_to t("notification.user.contributor.panel").html_safe, contributor_dashboard_path %> / <%= link_to t("notification.user.account").html_safe, me_path %>  / <%= link_to t("button.logout").html_safe, logout_path %></p>
+      </div>
+      <% end %>
     <% end %>
     <!-- Page Content -->
     <div class="content">

@@ -1,0 +1,39 @@
+fr:
+  title:
+    home: "Accueil"
+    seasons: "Toutes les saisons"
+    export: "Exporter"
+    about: "À propos"
+    contact: "Contactez-nous !"
+  notification:
+    user:
+      admin:
+        message: "Vous êtes connecté en tant qu'administrateur."
+        panel: "Accéder au panel administrateur &raquo;"
+      contributor:
+        message: "Vous êtes connecté en tant que contribueur."
+        panel: "Accéder au panel contribueur &raquo;"
+      account: "Modifier mon compte &raquo;"
+    contact:
+      error: "Votre message n'a pas été envoyé. Veuillez vérifier qu'il n'y ai aucun champ vide. Vous pouvez aussi nous contacter sur Twitter (@moutonnoireu, @fnux_ch)."
+      success: "Message envoyé !"
+  page:
+    seasons:
+      list: "Saison"
+      suggest: "Proposer une modification &raquo;"
+      shows: "Animes"
+      specials: "Speciaux / OAV"
+      movies: "Films"
+      hummingbird: "Hummingbird"
+      official_website: "Site &raquo;"
+      empty: "Il n'y a rien :/"
+      order:
+        alphabetical: "Ordre Alphabétique"
+        airing: "Date de sortie"
+        latest: "Derniers Ajouts"
+    contact:
+      email: "Votre addresse email (Obligatoire)"
+      name: "Votre nom/pseudo (Obligatoire)"
+      content: "Contenu du message... (Obligatoire)"
+    export:
+      select: "Veuillez sélectionner une saison à exporter :"

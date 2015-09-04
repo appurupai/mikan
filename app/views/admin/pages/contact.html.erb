@@ -1,12 +1,12 @@
-<h1><%= t('admin.pages.contact.title')%>  <%= link_to t('button.back').html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
+<h1><%= t('panel.pages.contact.title')%>  <%= link_to t('button.back').html_safe, admin_dashboard_path, class: "btn btn-default btn-lg" %></h1>
 <%= form_for [:admin,@page] do |f| %>
 <div class="row">
     <div class="col-md-9">
-        <%= f.text_area :content, class: "form-control form-ecart", placeholder: t('admin.pages.contact.placeholder.content'), rows: 10 %>
+        <%= f.text_area :content, class: "form-control form-ecart", placeholder: t('panel.pages.contact.placeholder.content'), rows: 10 %>
     </div>
     <div class="col-md-3">
         <div class="notice notice-info">
-            <p><%= t('admin.pages.contact.note') %></p>
+            <p><%= t('panel.pages.contact.note') %></p>
         </div>
         <%= f.submit t('button.save').html_safe, class: "btn btn-default btn-block btn-lg" %>
     </div>
